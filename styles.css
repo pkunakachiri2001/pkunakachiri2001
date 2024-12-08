@@ -1,0 +1,86 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: purple;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+    text-shadow: 1px 1px 2px #000000;
+}
+
+form {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkpurple;
+}
+
+.division {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid purple;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: lightgreen;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: purple;
+    color: white;
+}
+

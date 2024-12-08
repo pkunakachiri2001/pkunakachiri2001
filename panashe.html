@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIST Application Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: grey;
+      flex-direction: column; /* Ensure header and form are stacked vertically */
+    }
+    .header {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .header img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+    }
+    .header h1 {
+      font-size: 1.5em;
+    }
+    .navbar {
+      background-color: blue;
+      overflow: hidden;
+      width: 100%;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: darkblue;
+    }
+    form {
+      width: 80%;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      background-color: #ADD8E6;
+      margin: 0 auto;
+      width: 65%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    input[type="text"], .select-wrapper select {
+      padding: 5px;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 0px;
+      background-color: goldenrod;
+    }
+    .select-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 50px; /* Smaller width for day */
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .select-wrapper.month {
+      width: 70px; /* Larger width for month */
+    }
+    .select-wrapper.year {
+      width: 60px; /* Medium width for year */
+    }
+    .select-wrapper select {
+      width: 100%;
+      height: 100%;
+      padding-right: 30px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: none;
+      border-bottom: none;
+      background-color: goldenrod;
+      box-sizing: border-box;
+    }
+    .select-wrapper:after {
+      content: '\25BC'; /* Unicode for down arrow */
+      position: absolute;
+      right: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ADD8E6;
+      padding: 5px;
+      pointer-events: none;
+      height: 100%;
+      box-sizing: border-box;
+      border-top: 1px solid black;
+      border-left: 1px solid darkgrey;
+      border-bottom: 1px solid darkgrey;
+      border-right: none;
+    }
+    .recapcha-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .recapcha-input {
+      margin-right: 2px; /* Reduce space between inputs */
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: none;
+      border-bottom: none;
+      background-color: orange;
+    }
+    .recapcha-code {
+      background-color: #F0E68C;
+      border: 1px solid black;
+      padding: 2px; /* Smaller padding for smaller height */
+      color: black;
+      margin-right: 2px;
+      height: 20px; /* Reduced height */
+    }
+    .button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 0px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #3e8e41;
+    }
+    .refresh-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 5px; /* Smaller margin */
+    }
+    .refresh-button:hover {
+      background-color: #0000cc;
+    }
+    .next-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .next-button:hover {
+      background-color: #006400;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="IIST Logo">
+    <h1>Undergraduate Admission 2020 Online Application Portal</h1>
+  </div>
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#message">Message from Director, IIST</a>
+    <a href="#workthrough">A Walk Through IIST</a>
+    <a href="#brochure">Information Brochure</a>
+    <a href="#admission">Admission Webpage</a>
+    <a href="#facebook">#ST Facebook Page</a>
+    <a href="#login">Candidate Login</a>
+  </div>
+  <form>
+    <h3 style="color: orangered">Online Registration Process (Step 1 to 3)<br>Step 1</h3>
+    <table>
+      <tr>
+                <td>
+                    <label for="rollnumber">JEE Advanced-Roll Number:</label>
+                </td>
+                <td>
+                    <input type="text" id="rollnumber" name="roll_number" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dateofbirth">Date of Birth:</label>
+                </td>
+                <td>
+                    <div class="select-wrapper">
+                        <select id="day" name="day" required>
+                            <option value="">Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <!-- Add more options up to 31 -->
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="month" name="month" required>
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <!-- Add more options up to 12 -->
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="year" name="year" required>
+                            <option value="">Year</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <!-- Add more options up to current year -->
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="recapcha">Captcha:</label>
+                </td>
+                <td class="recapcha-container">
+                    <input type="text" id="recapcha" name="recapcha" class="recapcha-input" required>
+                    <div class="recapcha-code">1234</div>
+                    <button class="refresh-button" type="reset" id="refresh-button">Refresh</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button class="next-button" type="submit" id="proceed-button">Proceed to Step 2</button>
+                    <button class="refresh-button" type="reset" id="reset-button">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
