@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-COMMERCE WEBSITE</title>
+  
+  <style>
+    
+    .header {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      text-shadow: 1px 1px 4px #000;
+      background-image: url("back3.jpg");
+    }
+
+    
+    .header::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 300%;
+    
+     
+    }
+    .header img {
+      border-radius: 100%;
+      height: 90px;
+      width: 90px;
+      margin-right: 15px;
+      box-shadow: 0 0 5px #fff;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      margin: 0;
+      z-index: 1;
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-image: url("back6.jpg");
+      background-repeat: repeat;
+      padding: 10px 0;
+    }
+    
+    .navbar a {
+      color: rgb(9, 85, 121);
+      padding: 12px 25px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      background-color: rgba(55, 197, 19, 0.692);
+     
+    }
+    
+    .navbar a:hover {
+      background-color:red;
+      transform: scale(1.1);
+    }
+
+
+
+    
+  body {
+    margin: 0;
+    background-image: url("back6.jpg");
+    background-size: cover;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-image: url("back6.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+  }
+<!--/*
+  .content {
+    width: 80%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Add a transparent background if needed *
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: url("back3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the element *
+    background-position: center; /* Centers the image *
+}-->*/
+
+
+    .content:hover {
+      transform: translateY(-5px);
+    }
+    
+    .content h1, .content h2 {
+      margin-bottom: 20px;
+    }
+    
+    .content h1 {
+      font-size: 2.2em;
+      color: #e63946;
+    }
+    
+    .content h2 {
+      font-size: 1.8em;
+      color: #457b9d;
+    }
+
+    .content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .shop-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      color: white;
+      background-color: #e63946;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     
+    }
+
+    .shop-button:hover {
+      background-color: #d6b210;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    p{
+      color: #07e488;
+    }
+    .content {
+    position: relative; /* Needed for absolute positioning of the video */
+    width: 75%;
+    height: 250px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Optional semi-transparent overlay */
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures the video doesn't spill out of the div */
+  }
+
+  .content video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Places the video behind the content */
+  }
+
+  .content h1, .content h2, .content p, .shop-button {
+    position: relative; /* Keeps the text above the video */
+    z-index: 1;
+  }
+
+
+    .footer {
+      background-color: black;
+      text-align: center;
+      height: 50px;
+      color: white;
+      font-size: 12px;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <img src="sponge.jpeg" alt="SpongeBob Online Store Logo">
+    <h1>WELCOME TO THE SPONGE BOB ONE STOP SHOP!</h1>
+  </header>
+
+  <nav class="navbar">
+    <a href="page1.html">HOME</a>
+    <a href="corectindex.html">SHOP</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#contact">MY ACCOUNT</a>
+  </nav>
+
+  <main class="container">
+    <div class="content">
+      <!-- Background video -->
+      <video autoplay muted loop>
+        <source src="background1.mp4" type="video/mp4">
+      </video>
+  
+      <h1><!--WELCOME TO OUR ONLINE STORE!--></h1>
+      <h2><!--Explore Our Unique Collection Handpicked Just for You!--></h2>
+      <p><!--/*From exclusive SpongeBob merch to rare collectibles, we bring you the best items to satisfy all your SpongeBob needs. Our store is designed to offer you a seamless shopping experience, where fun meets quality!--></p>
+      <!--<hr style="border: 1.5px solid rgb(186, 211, 193); width: 70%; margin: 20px auto;">*/-->
+      <p><!--Get ready to dive into a world of quirky, vibrant, and must-have items. Whether you’re shopping for yourself or for that special SpongeBob fan in your life, we’ve got you covered!--></p>
+      
+    </div>
+    <a href="corectindex.html" class="shop-button">Shop Now</a>
+  </main>
+
+  <footer class="footer">
+    © All rights reserved. Designed by <b>Sponge family</b>
+  </footer>
+</body>
+</html>

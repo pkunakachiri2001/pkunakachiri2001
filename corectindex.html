@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b9a7a7;
+            border: 40px groove #c5d120;
+    border-radius: 20px;
+            }
+        
+        header {
+            background-color: rgb(238, 242, 245);
+            color: red;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10%;
+        }
+
+
+        .header {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      text-shadow: 1px 1px 4px #000;
+      background: #5206cc;
+      border-radius: 50%;
+    }
+
+    
+    .header::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 90%;
+      width: 300%;
+      border-radius: 50%;
+    
+     
+    }
+    .header img {
+      border-radius: 100%;
+      height: 90px;
+      width: 90px;
+      margin-right: 10px;
+      margin-left: 5px;
+      box-shadow: 0 0 5px #fff;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      margin: 0;
+      z-index: 1;
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color:rgb(71, 99, 95) ;
+      padding: 10px 0;
+      border-radius: 20%;
+    }
+    
+    .navbar a {
+      color: rgb(9, 85, 121);
+      padding: 12px 25px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      background-color: rgba(55, 197, 19, 0.692);
+     
+    }
+    
+    .navbar a:hover {
+      background-color:red;
+      transform: scale(1.1);
+    }
+   
+    .productrow {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px; /* Add space between items */
+        padding: 10px 0;
+        max-width: 100%; /* Adjust as needed */
+        scroll-behavior: smooth; /* Smooth scrolling */
+    }
+    .product-row::-webkit-scrollbar {
+        height: 8px;
+    }
+    .product-row::-webkit-scrollbar-thumb {
+        background-color: #888; /* Customize scrollbar thumb color */
+        border-radius: 5px;
+    }
+    .product-row::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Customize scrollbar track color */
+    }
+    .product {
+        min-width: 30%; /* Ensure each product takes up 30% of the container width */
+        flex-shrink: 0; /* Prevent shrinking */
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+
+    
+
+.product:hover {
+    transform: scale(1.1);
+    box-shadow: 32 32px 16px rgba(218, 15, 15, 0.7);
+    background-color: #139ac4; 
+}
+
+.product img {
+    transition: filter 0.3s ease;
+}
+.product:hover img {
+    filter: brightness(1.2);
+}
+
+.product p {
+    transition: color 0.3s ease;
+}
+.product:hover p {
+    color: #ff4500; /* OrangeRed color for text on hover */
+}
+.product:hover a {
+    color: #071de0; /* OrangeRed color for text on hover */
+}
+
+        
+        img {
+            width: 100%;
+        }
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #001f3f;
+    background-color: rgb(35, 214, 95);
+    }
+hr:first-of-type {
+    border-top: 5px ridge lightblue;
+  }
+
+p {
+    text-transform: uppercase;
+  }
+h1{background-color:lightblue;border-top:2px solid black;text-align:center;}
+
+h2{background-color:lightblue;border-top:10px solid black;text-align:center;
+border-radius: 30%;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 12px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgba(55, 197, 19, 0.692);
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff5e62;
+    transform: scale(1.1);
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5e62;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: all 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ff4500;
+}
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffecb3;
+}
+
+.product img {
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #333;
+}
+
+.dark-mode .product {
+    background-color: #2c2c2c;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode a {
+    color: #dce007;
+}
+#search {
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #ff5e62;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    border-color: #5206cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(82, 6, 204, 0.7);
+}
+.productrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product {border:15px;
+            border-style: ridge;
+            border-color: #8306cc;
+            border-radius: 50px;
+    flex-basis: 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex-basis: 90%;
+        max-width: 90%;
+    }
+}
+/* Style for the product row */
+.productrow {
+    display: flex;            /* Use flexbox to arrange products in a row */
+    overflow-x: auto;         /* Allow horizontal scrolling */
+    gap: 20px;                /* Space between products */
+    padding: 10px 0;          /* Optional padding for some spacing */
+    scrollbar-width: thin;    /* Style the scrollbar */
+    scroll-snap-type: x mandatory; /* Enable snap-to functionality for smooth scrolling */
+}
+
+.productrow::-webkit-scrollbar {
+    height: 8px; /* Set scrollbar height */
+}
+
+.productrow::-webkit-scrollbar-thumb {
+    background: #888; /* Set scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.productrow::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Set track color */
+}
+
+/* Show only the first three products fully visible */
+.product {
+    flex: 0 0 auto;             /* Don't let products stretch, fixed size */
+    width: 300px;               /* Set width for each product */
+    scroll-snap-align: start;   /* Ensure snap-to behavior */
+    margin-bottom: 20px;        /* Space below each product */
+}
+
+/* Optional: Ensure images are responsive */
+.product img {
+    max-width: 100%;            /* Ensure images scale within their container */
+    height: auto;
+}
+
+/* Optional: Add hover effects for products */
+.product:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive design: Allow horizontal scrolling without breaking the layout */
+@media screen and (max-width: 768px) {
+    .product {
+        width: 200px; /* Adjust product width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product {
+        width: 150px; /* Adjust product width for small screens */
+    }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.product-row {
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Add this to your CSS for 3D rotation effect */
+.product {
+    position: relative;
+    width: 400px; /* Set a specific width */
+    height: 500px; /* Set a specific height */
+    perspective: 1000px; /* Add perspective to give depth */
+    transition: transform 0.5s ease; /* Smooth transition */
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover; /* Ensure the image fits inside the container */
+    transition: transform 0.5s ease; /* Smooth scaling on hover */
+}
+
+.product:hover {
+    transform: rotateY(20deg) rotateX(10deg); /* Rotate the product */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for better depth */
+}
+
+.product:hover img {
+    transform: scale(1.05); /* Slight zoom effect on the image */
+}
+
+.product:hover p {
+    color: #ff4500; /* OrangeRed color for text on hover */
+}
+
+.product p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+.school{
+    border-radius: 30%;
+}
+
+hr {
+   color: lightblue 3px  dotted ;
+}
+marquee {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    </style>
+<script>
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// Show or hide the "back to top" button
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+};
+
+// Scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+    
+
+</script>
+</head>
+<body> 
+
+    <div class ="school">
+    <header>
+
+        <header class="header">
+            <img  src="sponge.jpeg" alt="SpongeBob Online Store Logo">
+         <behavior=" alternate"  scrollamount="20"loop="infinite"><h1 style="border-radius: 50%;">WELCOME TO THE SPONGE BOB ONE STOP SHOP!</h1></marquee> 
+          </header>
+        <input type="search" id="search" placeholder="Search for products, brands and more" name="search">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    </header>
+
+    
+      <nav class="navbar">
+        <a href="new moving.html">HOME</a>
+        <a href="corectindex.html">SHOP</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#contact">MY ACCOUNT</a>
+        <a href="cart.html" style="background-color: white;color: black;">
+            <img src="cart2.jpg" alt="Cart Icon" style="width: 35px; height: 35px; vertical-align: middle; margin-right: 5px;">
+            Cart
+         </a>
+      </nav>
+
+    </div>
+      
+
+</div>
+    <hr >
+    <behavior=" alternate"  scrollamount="20"loop="infinite"> <h2>BICYCLES</h2></marquee>
+    <hr>
+    <div class="productrow">
+        <div class="products">
+        
+    <div class="product">
+        
+        <img style="height:380px;" src="bicycle1.jpeg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="bicycle0.jpg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle0.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="bicycle01.jpg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle01.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bicycle02.jpg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bicycle03.jpg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bicycle04.jpg" alt="The strongest bicycle">
+        <p>the strongest bicycle<br><b>15204</b>rps<br>brand new
+            <a href="bicycle1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bicycle2.jpeg" alt="Simbi yebasa bicycle">
+        <p>simbi yebasa bicycle<br><b>15245</b>rps<br>brand new
+            <a href="bicycle2.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bicycle5.jpeg" alt="Indian strong bicycle">
+        <p>indian strong bicycle<br><b>15564</b>rps<br>brand new
+            <a href="bicycle5.html"><i>LEARN MORE HERE</i></a>
+    </div><button class="toggle-btn">Show More</button></div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"> <h2>BIKES</marquee>
+    <hr>
+    <div class="productrow">
+        <div class="products">
+        
+    <div class="product">
+        <img style="height:380px;" src="bike1.jpeg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+        <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="bike01.jpg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+        <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="bike0.jpg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+            <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bike02.jpg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+        <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bike03.jpg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+        <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bike04.jpg" alt="Bike 1">
+        <p>bike one<br><b>15200</b>rps<br>brand new
+            <a href="bike1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bike2.jpeg" alt="Bike 2">
+        <p>bike two<br><b>15250</b>rps<br>brand new
+            <a href="bike2.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="bike5.jpeg" alt="Bike 5">
+        <p>bike three<br><b>15300</b>rps<br>brand new
+            <a href="bike3.html"><i>LEARN MORE HERE</i></a>
+
+    </div><button class="toggle-btn">Show More</button></div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"></marquee><h2>ALSO WE HAVE SCOOTERS</h2></marquee>
+    <hr>
+    <div class="productrow">
+        <div class="products">
+        
+    <div class="product">
+        
+        <img style="height:380px;" src="scooter1.jpeg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="scooter0.jpg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="scooter01.jpg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="scooter02.jpg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="scooter03.jpg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="scooter04.jpg" alt="Scooter 1">
+        <p>scooter one<br><b>15400</b>rps<br>brand new
+        <a href="scooter1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="scooter2.jpeg" alt="Scooter 2">
+        <p>scooter two<br><b>15450</b>rps<br>brand new
+            <a href="scooter2.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="scooter3.jpeg" alt="Scooter 3">
+        <p>scooter three<br><b>15500</b>rps<br>brand new
+            <a href="scooter3.html"><i>LEARN MORE HERE</i></a>
+
+    </div><button class="toggle-btn">Show More</button></div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"> <h2>LETS DIVE INTO CARS</marquee>
+    <hr>
+    <div class="productrow">
+        <div class="products">
+        
+    <div class="product">
+        
+        <img style="height:380px;" src="car1.jpeg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="car0.jpg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="car01.jpg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="car02.jpg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="car03.jpg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="car04.jpg" alt="Car 1">
+        <p>car one<br><b>2554215</b>rps<br>brand new
+        <a href="car1.html"><i>LEARN MORE HERE</i></a>
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="car2.jpeg" alt="Car 2">
+        <p>car two<br><b>2554215</b>rps<br>brand new
+            <a href="car2.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product hidden">
+        <img style="height:380px;" src="car3.jpeg" alt="Car 3">
+        <p>car three<br><b>244220</b>rps<br>brand new
+            <a href="car3.html"><i>LEARN MORE HERE</i></a>
+
+</div><button class="toggle-btn">Show More</button>    </div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"><h2>ALSO  THIS TYPE OF FASHION </marquee>
+<hr>
+<div class="productrow">
+    <div class="products">
+    <div class="product">
+        
+        <img style="height:380px;" src="sari1.jpg" alt="Sari 1">
+        <p>sari one<br><b>15000</b>rps<br>brand new
+            <a href="img.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="sari2.jpg" alt="ari 2">
+        <p>sari two<br><b>15200</b>rps<br>brand new
+            <a href="img1.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="sari3.jpg" alt="ari 3">
+        <p>sari three<br><b>15500</b>rps<br>brand new
+            <a href="img2.html"><i>LEARN MORE HERE</i></a>
+
+</div><button class="toggle-btn">Show More</button>    </div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"><h2>WE CAN ALSO SUPPLY PERFECT DRESES </marquee>
+<hr><div class="productrow">
+    <div class="products">
+     <div class="product">
+        
+        <img style="height:380px;" src="dress1.jpg" alt=Dress 1">
+        <p>dress 1<br><b><br>price 800 brand new </b></p>
+            <a href="img3.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="dress2.jpg" alt="Dress 2">
+        <p>dress 2<br><b></brps<br>900>brand new
+            <a href="img4.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="dress3.jpg" alt="Dress 3">
+        <p>dress 3<br><b>1,000</b>rps<br>brand new</p>
+            <a href="img5.html"><i>LEARN MORE HERE</i></a>
+
+</div><button class="toggle-btn">Show More</button>    </div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"><h2>LEGENDARY SUITS FOR THE RESPECTED</marquee>
+<hr><div class="productrow">
+    <div class="products">
+    <div class="product">
+        
+        <img style="height:380px;" src="suit1.jpg" alt="Suit 1">
+        <p>suit 1<br><b>1,500</b>rps<br>brand new</p>
+            <a href="img6.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="suit2.jpg" alt="Suit 2">
+        <p>suit 2<br><b>2,000</b>rps<br>brand new</p>
+            <a href="img7.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="suit3.jpg" alt="Suit 3">
+        <p>suit 3<br><b>2,500</b>rps<br>brand new</p>
+            <a href="img8.html"><i>LEARN MORE HERE</i></a>
+
+</div><button class="toggle-btn">Show More</button>    </div></div>
+    <hr>
+    <marquee behavior=" alternate"  scrollamount="20"loop="infinite"><h2>T-SHIRTS YOU MAY ALSO LIKE </marquee>
+<hr><div class="productrow">
+    <div class="products">
+    <div class="product">
+        
+        <img style="height:380px;" src="shirt2.jpg" alt="Shirt 2">
+        <p>shirt 2<br><b> price 300 rps brand new
+            <a href="img9.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="shirt4.jpg" alt="Shirt 4">
+        <p>shirt 4<br<b>><b></</b>brps<br>350>brand new</p>
+            <a href="img10.html"><i>LEARN MORE HERE</i></a>
+
+    </div>
+    <div class="product">
+        <img style="height:380px;" src="shirt3.jpg" alt="Shirt 3">
+        <p>shirt 3<br><b>400 rps <br>brand new</b></p>
+            <a href="img11.html"><i>LEARN MORE HERE</i></a>
+            
+    </div></div>
+    <hr>
+    <button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()">↑</button>
+<script>
+    // JavaScript to enable search functionality
+    document.getElementById("search").addEventListener("input", function () {
+        const searchQuery = this.value.toLowerCase(); // Get the input value in lowercase
+        const products = document.querySelectorAll(".product"); // Select all product elements
+        
+        products.forEach(product => {
+            const productText = product.textContent.toLowerCase(); // Get the product text content
+            if (productText.includes(searchQuery)) {
+                product.style.display = "inline-block"; // Show the product if it matches the query
+            } else {
+                product.style.display = "none"; // Hide the product otherwise
+            }
+        });
+    });
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const row = button.parentElement;
+    const hiddenProducts = row.querySelectorAll('.hidden');
+    hiddenProducts.forEach(product => {
+      product.classList.toggle('hidden');
+    });
+
+    // Update button text
+    if (hiddenProducts[0].classList.contains('hidden')) {
+      button.textContent = 'Show More';
+    } else {
+      button.textContent = 'Show Less';
+    }
+  });
+});
+
+</script>
+</body>
+</html>
