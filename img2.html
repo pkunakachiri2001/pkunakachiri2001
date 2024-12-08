@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <title>E Commerce</title>
+    <style>
+        body {
+            font-family: 'Red Serifs';
+            background-color: hsl(41, 94%, 41%);
+        }
+
+        header {
+            background-color: rgb(238, 242, 245);
+            color: red;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            position: relative;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            text-shadow: 1px 1px 4px #000;
+            background: #5206cc;
+        }
+
+        .header::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 300%;
+        }
+
+        .header img {
+            border-radius: 100%;
+            height: 90px;
+            width: 90px;
+            margin-right: 15px;
+            box-shadow: 0 0 5px #fff;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(24, 230, 202);
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: rgb(9, 85, 121);
+            padding: 12px 25px;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            background-color: rgba(55, 197, 19, 0.692);
+        }
+
+        .navbar a:hover {
+            background-color: red;
+            transform: scale(1.1);
+        }
+
+        #search {
+            border-width: 2px;
+            border-color: lightblue;
+            width: 80%;
+            height: 50px; 
+        }
+
+        .sari {
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            margin-top: 125px;
+        }
+
+        .form1 {
+            display: none;
+            border: 1px solid grey;
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .form1 input, .form1 select, .form1 textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product1 button {
+            background-color: rgb(19, 48, 212);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+            transform: scale(1.1);
+        }
+
+        .product1 {
+            background-color: rgb(111, 138, 12);
+            border: 1px solid grey;
+            font-size: 20px;
+            font-family: Times New Roman;
+        }
+        table{
+            border:15px;
+            border-style: ridge;
+            border-color: #80cc06;
+            border-radius: 50px;
+        }
+
+        .form1 button {
+            background-color: rgb(19, 48, 212);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+       .form1 button:hover {
+            background-color: #00ff37;
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function showForm() {
+            document.querySelector('.form1').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <header class="header">
+            <img src="sponge.jpeg" alt="SpongeBob Online Store Logo">
+            <h1 style="padding-left: 100px;">THE SPONGE BOB ONE STOP SHOP!</h1>
+        </header>
+        <input type="search" id="search" placeholder="Search for products, brands and more" name="search">
+    </header>
+
+    <nav class="navbar">
+        <a href="new moving.html">HOME</a>
+        <a href="corectindex.html">SHOP</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#contact">MY ACCOUNT</a>
+    </nav>
+    <table><tr><td>
+    <div class="sari">
+        <div style="border: 1px solid grey; padding: 30px;"> 
+            <img src="sari3.jpg" alt="sari"  height="600px">
+            <p>INDIAN WOMEN FLORAL PRINTED SARI</p>
+            <p>₹1 530.00  <del>₹2 960.00</del></p>   
+        </div>
+        <div class="product1">
+            <h3><u>Product details</u></h3>
+            <p><b>Material composition</b>: <i>Silk</i></p>
+            <p><b>Weave type</b>: <i>Kanchipuram</i></p>
+            <p><b>Design name</b>: <i>Zari</i></p>
+            <p><b>Length</b>: <i>Saree length: 5.40 meter; Blouse length: 0.80 meter</i></p>
+            <p><b>Occasion type</b>: <i>Party</i></p>
+            <p><b>Care instructions</b>: <i>Dry Clean Only</i></p>
+            <p><b>Country of Origin</b>: <i>India</i></p>
+            <button>ADD TO CART</button>
+            <button onclick="showForm()">BUY NOW</button>
+        </div>
+        <div class="form1">
+            <form action="mailto:kunaka2001@gmail.com" method="post" enctype="text/plain">
+                <h3>Customer Details</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="debit_card">Debit Card</option>
+                    <option value="net_banking">Net Banking</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</td></tr></table>
+</body>
+</html>

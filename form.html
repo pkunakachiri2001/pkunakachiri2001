@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIST Application Form</title>
+ <style>
+    body {
+  margin: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+.header img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.header h1 {
+  font-size: 1.5em;
+}
+.navbar {
+  background-color: blue;
+  overflow: hidden;
+  width: 100%;
+}
+.navbar a {
+float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-right: 1px solid black; /* Insert black line division */
+}
+.navbar a:last-child {
+  border-right: none; /* Remove border from the last link */
+}
+.navbar a:hover {
+  background-color: darkblue;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+margin-top: 10px; 
+}
+.content {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  background-color: white;
+  margin: 0 auto;
+  width: 65%;
+}
+tr:nth-child(odd) {
+  background-color: #bcd7e2;
+}
+th, td {
+  border: 2px solid white;
+  padding: 10px;
+  text-align: left;
+}
+input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    .select-wrapper select  {
+  padding: 5px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0px;
+  background-color: goldenrod;
+}
+.select-wrapper {
+  position: relative;
+  display: inline-block; /* Smaller width for day */
+  height: 100%;
+  box-sizing: border-box;
+}
+.select-wrapper.month {
+  width: 70px; /* Larger width for month */
+}
+#PD{
+  width: 55px; /* Medium width for year */
+}
+#category {
+  width: 120px; /* Increased width for category and PD */
+}
+.select-wrapper select {
+  width: 100%;
+  height: 100%;
+  padding-right: px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: none;
+  border-bottom: none;
+  background-color: goldenrod;
+  box-sizing: border-box;
+}
+.select-wrapper:after {
+  content: '\25BC'; /* Unicode for down arrow */
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ADD8E6;
+  padding: non;
+  pointer-events: none;
+  height: 95%;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-left: 1px solid darkgrey;
+  border-bottom: 1px solid darkgrey;
+  border-right: 1px solid grey;
+ 
+}
+  .inline {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .input-container {
+      display: inline-block;
+}.small-input {
+      width: 50px;
+     }
+
+     .ll1{
+        width: 40px;
+     }
+ .ll2{
+        width: 50px;
+     }
+ .required {
+    color: rgb(138, 40, 11);
+  }
+ </style>
+</head>
+
+<body>
+
+
+ <div class="header">
+      <img src="logo.png" alt="IIST Logo">
+            <h1>Undergraduate Admission 2020 Online Application Portal</h1></tr>
+   </div>
+        <div class="navbar">
+             <a href="#home">Home</a>
+                <a href="#message">Message from Director, IIST</a>
+                <a href="#workthrough">A Walk Through IIST</a>
+                <a href="#brochure">Information Brochure</a>
+                <a href="#admission">Admission Webpage</a>
+                <a href="#facebook">#ST Facebook Page</a>
+                <a href="#login">Candidate Login</a></td>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3 style="color: orangered">Step 2 Online Registration Form<br></h3><br><br><br><br>
+      <form>
+        <table style="width:90%">
+          <tr>
+            <td>
+              <label for="name">Candidate Name:<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="name" name="name" required>
+            </td>
+            <td>JEE Advanced-Roll Number:<span class="required">*</span></td>
+            <td><input type="text" name="roll_number" required></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="gender">Gender:<span class="required">*</span></label>
+            </td>
+            <td>
+              <div class="select-wrapper">
+                <select id="gender" name="gender" required>
+                  <option value="">Male</option>
+                  <option value="1">Female</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <label for="Birth">Date of Birth:<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="Birth" name="Birth" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="category">Category:<span class="required">*</span></label>
+            </td>
+            <td>
+              <div class="select-wrapper">
+                <select id="category" name="category" required>
+                  <option value="1">General</option>
+                  <option value="1">Others</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <label for="PD">PD:<span class="required">*</span></label>
+            </td>
+            <td>
+              <div class="select-wrapper">
+                <select id="PD" name="PD" required>
+                  <option value="1">Yes</option>
+                  <option value="1">No</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <hr>
+<table style="width:70%">
+          <tr>
+            <td>
+              <label for="password">password<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="password" id="password" name="password" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <label for="repassword">Re-enter password<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="password" id="repassword" name="repassword" required>
+            </td>
+        </tr>
+        <tr>
+       <td colspan="2">[Remember the above Password for future login to Undergraduate Admissions-2020 website. Your Logn-ID will be your IIST Registration Number which will be auto generated and displayed on submitting this online registration form]
+     </tr>
+<tr>
+            <td>
+              <label for="nationality">Nationality<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="nationality" name="nationality" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <label for="adress">Adress for Communication<br>(Buiding/street/locality)<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="adress" name="adress" required><br>
+               <input type="text" id="adres" name="adress" required><br>
+               <input type="text" id="adre" name="adress" required>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="city">City<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="city" name="city" required>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="Pincode">Pincode<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="text" id="Pincode" name="Pincode" required>
+            </td>
+        </tr>
+ <tr>
+            <td>
+              <label for="state">State<span class="required">*</span></label>
+            </td>
+            <td>
+              <div class="select-wrapper">
+                <select id="state" name="state" required>
+                <option value="1">maharashtra</option>
+                  <option value="1">--select--</option>
+                  <option value="1">delhijo</option>
+                  <option value="1">majura</option>
+                 <option value="1">zimdbb</option>
+                  <option value="1">fjhuro</option>
+                </select>
+              </div>
+            </td>
+<tr>
+            <td>
+              <label for="ada">Aadhaar No.<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="number" id="ada" name="ada" required>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="email">Email-Id<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="email" id="email" name="email" required>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="email">Re-enter Email-Id<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="email" id="email" name="email" required>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="card">JEE Advanced 2020 Admit Card<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="file" id="card" name="card" required>
+             <p>maxsize:500KB,*.jpg/png/pdf files only</p>
+            </td>
+        </tr>
+<tr>
+            <td>
+              <label for="photo">Upload Photo<span class="required">*</span></label>
+            </td>
+            <td>
+              <input type="file" id="photo" name="photo" required>
+             <p>maxsize:100KB,*.jpg/png files only</p>
+            </td>
+        </tr>
+<tr>
+            <td><label for="landline">Landline No.<span class="required">*</span></label></td>
+      <div> 
+ <td>
+          
+          <input  class="ll1" type="text" id="ll">
+<p style="display: inline;">-</p>
+          <input class="ll2" type="text" id="ll">
+<p style="display: inline;">-</p>
+          <input class="ll3" type="text" id="ll">
+          <p style="display: inline;">eg;91-471-2568477</p>
+        </td>
+</div>
+      </tr>
+      <tr>
+        <td><label for="mobile">Primary Mobile No.(Candidate)<span class="required">*</span></label></td>
+      <div>   <td>
+          <input type="tel" id="mobile" name="mobile" required>
+          <p style="display:inline">eg:9876543210</p>
+        </td></div>
+      </tr>
+      <tr>
+        <td><label for="parent">Mobile No.(Parent)<span class="required">*</span></label></td>
+       <div> <td>
+          <input type="tel" id="parent" name="parent" required>
+          <p  style="display:inline">eg:9876543210</p>
+        </td></div>
+      </tr>
+      <tr>
+        <td><label for="alter">Alternate Mobile No<span class="required">*</span></label></td>
+         <div><td>
+          <input type="tel" id="alter" name="alter" required>
+          <p  style="display:inline">eg:9876543210</p>
+        </td></div>
+      </tr>
+      <tr>
+        <td><label for="fees">Fees<span class="required">*</span></label></td>
+        <td class="input-container">
+          <p class="inline">Rs</p>
+          <input type="number" id="alter" placeholder="600" name="alter" required>
+        </td>
+        </tr>
+<tr>
+            <td colspan="2">
+              <p style="color: rgba(226, 61, 11, 0.705); font-size: 16px;""><b>Filling-in your Branch Preferences </b></p>
+            </td>
+        </tr>
+<tr>
+    <td colspan="2">
+<ul>
+<li style="color: rgba(226, 61, 11, 0.705); font-size: 14px;">Candidates are require to fill in their choice of branch in order of preference for the Undergraduate and Dual Degree Programmes.</li>
+<li style="color: rgba(226, 61, 11, 0.705); font-size: 14px;"></li><b>After 9 October 2020 12:00hrs, the preference will be locked .No further change of choice preference will be entertained.</b></li>
+<li style="color: rgba(226, 61, 11, 0.705); font-size: 14px;"></li>Candidates are advised to choose the branch as per their interest .</li>
+<li style="color: rgba(226, 61, 11, 0.705); font-size: 14px;"><b>it is NOT mandatory to fill-in all three choices.</b></li>
+<ul>
+</td>
+</tr>
+<tr>
+    <td colspan="2">
+<p><b>Branch Preferences <span class="required">*</span></p>
+</td>
+</tr>
+<tr>
+            <td>
+              <p>Preference 1</p>
+                 <p>Preference 2</p>
+              <p>Preference 3</p>
+            </td>
+<td>
+              <div class="select-wrapper">
+                <select id="ch" name="state" required>
+                <option value="1">--select--</option>
+                  <option value="1">Aerospace engineering</option>
+                  <option value="1">artificial inteligence</option>
+                  <option value="1">machine learning</option>
+                 <option value="1">electronics and communication engineering</option>
+                  <option value="1">computer engineering </option>
+                </select>
+              </div><br><br>
+<div class="select-wrapper">
+                <select id="ch" name="state" required>
+                <option value="1">--select--</option>
+                  <option value="1">Aerospace engineering</option>
+                  <option value="1">artificial inteligence</option>
+                  <option value="1">machine learning</option>
+                 <option value="1">electronics and communication engineering</option>
+                  <option value="1">computer engineering </option>
+                </select>
+              </div><br><br>
+<div class="select-wrapper">
+                <select id="ch" name="state" required>
+                <option value="1">--select--</option>
+                  <option value="1">Aerospace engineering</option>
+                  <option value="1">artificial inteligence</option>
+                  <option value="1">machine learning</option>
+                 <option value="1">electronics and communication engineering</option>
+                  <option value="1">computer engineering </option>
+                </select>
+              </div>
+</td>
+        </tr>
+</table>
+<hr>
+<div class="conf" style="text-align:left;background-color: rgb(121, 105, 124);";>
+<div>
+<input type="checkbox" id=" chaka"name=chaka>
+<p style="display:inline;font-size:12px">I affirm that the information filled by me are correct to the best of my nkowledge and belief.I also fully understand that, if at any stage, it is discovered tha any attempt was made by me to willfully conceal or misrepresent the fact,
+my candidature may be summarily rejected and my admission to the programme terminated</p><br>
+</div>
+<div>
+<input type="checkbox" id=" chak"name=chaka>
+<p style="display:inline;font-size:12px">Also I understand that it is mandatory to login and RE-VALIDATE my registration on the specified dates as mentionedin the Schedule uploade on the website.<br>
+Failing this , Ishall NOT be considered for subsequent rounds of Seat Allotment/Acceptance. </p>
+</div>
+</div>
+ </form>
+    </div>
+  </div>
+</body>
+</html>

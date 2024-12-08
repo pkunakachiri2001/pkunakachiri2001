@@ -1,0 +1,23 @@
+/* Hover Effects */
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.product:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #f0f8ff; /* Light cyan background on hover */
+}
+
+.product img {
+    transition: filter 0.3s ease;
+}
+.product:hover img {
+    filter: brightness(1.2);
+}
+
+.product p {
+    transition: color 0.3s ease;
+}
+.product:hover p {
+    color: #ff4500; /* OrangeRed color for text on hover */
+}
